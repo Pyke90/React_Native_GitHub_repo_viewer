@@ -1,0 +1,1 @@
+export const NEW_INPUT = 'NEW_INPUT';
