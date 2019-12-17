@@ -1,13 +1,13 @@
 const initialState = {
-    userInput:'testi2'
+    repos: [],
   };
   
-export const inputReducer = (state = initialState, action) => {
+export const reposReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'NEW_INPUT':{ 
+    case 'FETCHED_REPOS':{ 
       return {
         ...state,
-        userInput: action.userInput,
+        repos: action.repos,
       }
     }
 

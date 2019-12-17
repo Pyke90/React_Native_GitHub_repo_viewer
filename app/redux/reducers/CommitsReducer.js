@@ -1,13 +1,13 @@
 const initialState = {
-    userInput:'testi2'
+    commits: [],
   };
   
-export const inputReducer = (state = initialState, action) => {
+export const commitsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'NEW_INPUT':{ 
+    case 'FETCHED_COMMITS':{ 
       return {
         ...state,
-        userInput: action.userInput,
+        commits: action.commits,
       }
     }
 
