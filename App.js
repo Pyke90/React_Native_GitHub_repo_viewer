@@ -1,5 +1,5 @@
 import React from 'react';
-import Routes from './app/config/Routes.js';
+import Routes from './app/config/Navigator.js';
 import { Provider } from 'react-redux';
 import Store from './app/redux/Store.js';
 
