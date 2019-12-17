@@ -1,5 +1,3 @@
-import React, { useSate } from 'react';
-
 import { FETCH_REPOS_REQUEST, FETCH_REPOS_FAILURE, FETCH_REPOS_SUCCESS, FETCHED_REPOS, FETCHED_COMMITS,  } from './ActionTypes';
 import { getApi } from '../../components/getApi';
 

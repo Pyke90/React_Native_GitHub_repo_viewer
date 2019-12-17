@@ -7,8 +7,6 @@ const repoCommits = (props) => {
 
     return (
         <>
-        
-        <Text>halloo</Text>
 
         <RenderCommits
         commits = {props.commits}

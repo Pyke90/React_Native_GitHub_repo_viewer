@@ -4,7 +4,6 @@ import { Input, Button, Text, ListItem, Image } from 'react-native-elements';
 
 export const RenderCommits = (props) => {
     
-    console.log("rendaaaaaa", props.commits)
     return (
             <ScrollView>
             {
@@ -17,7 +16,8 @@ export const RenderCommits = (props) => {
                     <View>
                     
                     <Text> Author: {JSON.stringify(commit.commit.author.name)}</Text>
-                    <Text> Message: {JSON.stringify(commit.commit.message)}</Text>
+                    <Text> Summary: {JSON.stringify(commit.commit.message)}</Text>
+                    <Text> Date: {JSON.stringify(commit.commit.committer.date)}</Text>
                     
                     </View>                    
                     }
