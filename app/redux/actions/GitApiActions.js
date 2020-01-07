@@ -21,7 +21,7 @@ export const fetchReposRequest = (user) => {
         })
         .catch(err => {
             dispatch(fetchedRepos([]))
-            console.log("error", err)
+            //console.log("error", err)
             throw err;
         })
     }
