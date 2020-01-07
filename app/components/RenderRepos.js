@@ -1,10 +1,8 @@
 import React from 'react';
 import { ScrollView, View } from 'react-native';
-import { Input, Button, Text, ListItem } from 'react-native-elements';
+import { Button, Text, ListItem } from 'react-native-elements';
 
 export const RenderRepos = (props) => {
-    const repoName = ''
-    const user = ''
     
     return (
         
@@ -18,9 +16,7 @@ export const RenderRepos = (props) => {
                 return(
                     
                   <ListItem
-                    key={i}       
-                    onPress={ () => {props.reduxFetchCommitsRequest ('Pyke90', 'MemoApp') || 
-                                    props.navigation.navigate('RepoCommits') }}  
+                    key={i}         
                     subtitle={
                     <View>
 

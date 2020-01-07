@@ -1,10 +1,11 @@
 import React from 'react';
 import { ScrollView, View } from 'react-native';
-import { Input, Button, Text, ListItem, Image } from 'react-native-elements';
+import { Text, ListItem } from 'react-native-elements';
 
 export const RenderCommits = (props) => {
     
     return (
+      
             <ScrollView>
             {
               props.commits.map((commit, i) => {

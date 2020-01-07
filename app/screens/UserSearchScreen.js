@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Input, Button, Text } from 'react-native-elements';
+import { Input, Button } from 'react-native-elements';
 import { connect } from 'react-redux';
-import { newInput } from '../redux/actions/InputActions';
 import { fetchReposRequest, fetchCommitsRequest } from '../redux/actions/GitApiActions';
 import { RenderRepos } from '../components/RenderRepos'; 
 
@@ -20,7 +19,6 @@ const userSearch = (props) => {
         />
 
         <Button onPress={() => props.reduxFetchReposRequest(input) }
-        
         title='GET USER REPOS'/>
         
         <RenderRepos
@@ -35,21 +33,17 @@ const userSearch = (props) => {
 }
 
 const mapStateToProps = (state) => {
-    console.log("state logged", state)
     return {
-    userInput: state.inputReducer.userInput,
     reposList: state.reposReducer.repos,
-    
     };
     
-};
+}
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        reduxUserInput: (i) => dispatch(newInput(i)),
         reduxFetchReposRequest: (i) => dispatch(fetchReposRequest(i)),
         reduxFetchCommitsRequest: (user, repo) => dispatch(fetchCommitsRequest(user, repo))
     };
-};
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(userSearch);
